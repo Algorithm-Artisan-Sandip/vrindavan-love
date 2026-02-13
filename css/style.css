@@ -1,0 +1,451 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+body {
+    margin: 0;
+    font-family: 'Noto Serif Devanagari', serif;
+    overflow-x: hidden;
+    background: #FFF8E1;
+}
+
+section {
+    position: relative;
+}
+
+/* =====================================================
+   PERMANENT SECTION LABEL
+===================================================== */
+
+.section-label {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #6B4226;
+    z-index: 10;
+}
+
+.dark-label {
+    color: #ffffff;
+}
+
+/* =====================================================
+   HERO SECTION (VRINDAVAN YOGA)
+===================================================== */
+
+.hero-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(
+        45deg,
+        #FDECC8,
+        #F8D77F,
+        #E8F6EF,
+        #D6EAF8,
+        #FADBD8
+    );
+    background-size: 400% 400%;
+    animation: vrindavanGradient 20s ease infinite;
+}
+
+@keyframes vrindavanGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-left {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-art {
+    width: 90%;
+    border-radius: 35px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+.hero-center {
+    width: 40%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-feather-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../assets/images/peacock.png') center/75% no-repeat;
+    opacity: 0.18;
+    filter: drop-shadow(0 0 30px rgba(212,175,55,0.7));
+    animation: divineFloat 10s ease-in-out infinite;
+    z-index: -1;
+}
+
+.hero-sloka {
+    font-size: 30px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #6B4226;
+}
+
+.hero-center h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.enter-btn {
+    padding: 14px 35px;
+    border: 2px solid #D4AF37;
+    border-radius: 999px;
+    font-size: 20px;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.4s;
+}
+
+.enter-btn:hover {
+    background: #D4AF37;
+    color: white;
+}
+
+@keyframes divineFloat {
+    0% { transform: translateY(0px) rotate(-3deg); }
+    50% { transform: translateY(-20px) rotate(4deg); }
+    100% { transform: translateY(0px) rotate(-3deg); }
+}
+
+/* =====================================================
+   SMRITI SECTION
+===================================================== */
+
+.smriti-section {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #FFF8E1, #FDECC8);
+    padding: 80px 40px;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+}
+
+.plate {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.plate-img {
+    width: 60%;
+    position: relative;
+    padding: 30px;
+}
+
+.plate-img img:first-child {
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    border-radius: 25px;
+    padding: 25px;
+    background: linear-gradient(
+        135deg,
+        #fff9e6,
+        #fdecc8,
+        #f8d77f,
+        #fff9e6
+    );
+    box-shadow: 0 20px 40px rgba(212,175,55,0.25);
+}
+
+.feather-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 90px;
+    animation: divineFloat 6s ease-in-out infinite;
+}
+
+.flute-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 120px;
+    animation: divineFloat 8s ease-in-out infinite;
+}
+
+.plate-text {
+    width: 40%;
+    font-size: 26px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* =====================================================
+   VIYOG SECTION (50/50)
+===================================================== */
+
+.yamuna-section {
+    min-height: 100vh;
+    padding: 100px 50px;
+    background: linear-gradient(to bottom,
+        #0c1026,
+        #141a3a,
+        #1c1f4a,
+        #2c2f6b
+    );
+    color: white;
+    overflow: hidden;
+}
+
+.yamuna-mist {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 60%,
+        rgba(255,255,255,0.05),
+        transparent 70%);
+    animation: mistDrift 25s linear infinite alternate;
+}
+
+.yamuna-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        transparent 50%,
+        rgba(0,0,0,0.75) 100%
+    );
+}
+
+.viyog-layout {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.viyog-left,
+.viyog-right {
+    width: 50%;
+}
+
+.viyog-left img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+    filter: brightness(0.8);
+}
+
+.viyog-message {
+    font-size: 24px;
+    line-height: 2;
+}
+
+/* =====================================================
+   PUNARMILAN SECTION
+===================================================== */
+
+.reunion-section {
+    min-height: 100vh;
+    padding: 80px 30px;
+    background: linear-gradient(to bottom,
+        #fff3c4,
+        #fdecc8,
+        #f8d77f,
+        #fff8e1
+    );
+}
+
+.proposal-phase {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    transition: opacity 1.5s ease;
+}
+
+.proposal-text {
+    font-size: 28px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.proposal-question {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.proposal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.yes-btn,
+.no-btn {
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 2px solid #D4AF37;
+    cursor: pointer;
+    background: white;
+}
+
+.future-phase {
+    display: none;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.future-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 30px;
+}
+
+.future-left,
+.future-right {
+    width: 40%;
+    text-align: center;
+}
+
+.future-left img,
+.future-right img {
+    width: 90%;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.future-center {
+    width: 20%;
+    text-align: center;
+}
+
+.future-text {
+    font-size: 26px;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   ROSE RAIN
+===================================================== */
+
+.rose-rain {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.rose {
+    position: absolute;
+    top: -50px;
+    width: 40px;
+    animation: fall 8s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes mistDrift {
+    0% { transform: scale(1) translateY(0px); }
+    100% { transform: scale(1.1) translateY(-20px); }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .section-label {
+        font-size: 24px;
+        top: 15px;
+    }
+
+    .hero-wrapper,
+    .smriti-section,
+    .yamuna-section,
+    .reunion-section {
+        padding: 60px 20px;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-left,
+    .hero-center {
+        width: 100%;
+    }
+
+    .plate {
+        flex-direction: column;
+    }
+
+    .plate-img,
+    .plate-text {
+        width: 100%;
+    }
+
+    .viyog-layout {
+        flex-direction: column;
+    }
+
+    .viyog-left,
+    .viyog-right {
+        width: 100%;
+    }
+
+    .future-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .future-left,
+    .future-right,
+    .future-center {
+        width: 100%;
+    }
+}
